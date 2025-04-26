@@ -1,1 +1,233 @@
+:root {
+    --primary-dark: #083840;
+    --primary-medium: #1E7685;
+    --primary-light: #4BB3BF;
+    --secondary: #D8E8E9;
+    --accent: #FC915E;
+    --text-primary: #083840;
+    --text-secondary: #4A4A4A;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--secondary);
+    color: var(--text-primary);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 95%;
+    margin-bottom: 2rem;
+    min-height: 60px;
+    padding-top: 0 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem; 
+    padding: 0.3rem 0.8rem; 
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Menú principal horizontal */
+  .nav-links {
+    position: relative;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-light);
+  }
+  
+  /* Menú hamburguesa */
+  .menu-checkbox {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .menu-toggle:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+    color: var(--accent);
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  
+  .selector-ciudad {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--secondary);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Secciones */
+  .secciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+  
+  .card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    color: var(--primary-dark);
+  }
+  
+  .card p {
+    color: var(--text-secondary);
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .card a:hover {
+    background-color: var(--primary-light);
+  }
+  
+  /* Colores específicos para tarjetas */
+  .rosa { background-color: #FFD7E9; border: 2px solid #FFB6C1; }
+  .celeste { background-color: #E6F7FF; border: 2px solid #87CEEB; }
+  .oscuro { background-color: #E0E0E0; border: 2px solid #A9A9A9; }
+  .naranja { background-color: #FFF3E0; border: 2px solid #FFA07A; }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary-dark);
+    color: var(--accent);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: var(--primary-dark);
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      transition: transform 0.3s;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    /* Ocultar menú por defecto en móvil */
+    .nav-links {
+      display: none;
+    }
+  
+    /* Mostrar menú cuando el checkbox está marcado */
+    #menu-toggle:checked ~ .nav-links {
+      display: block;
+      transform: translateY(0);
+    }
+  
+    /* Efecto de fondo oscuro */
+    #menu-toggle:checked ~ .nav-container::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+  
+    /* Icono X al abrir */
+    #menu-toggle:checked + .menu-toggle::after {
+      content: '×';
+      font-size: 2rem;
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+    }
+  
+    .secciones {
+      grid-template-columns: 1fr;
+      padding: 2rem 0;
+    }
+  }
