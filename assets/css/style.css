@@ -231,3 +231,73 @@
       padding: 2rem 0;
     }
   }
+
+  .contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+  }
+
+  .contacto .title{
+    font-size: 2rem;
+    color: #083840;
+    text-align: left;
+  }
+
+  .formulario {
+    width: 40%;
+    height: 50%;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    margin-left: 5%;
+    padding: 1%;
+    text-align: justify;
+    border-bottom: #083840 1px solid;
+    line-height: 2rem;
+  }
+
+  label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:#083840;
+    margin-top: 1%;
+    display: inline-block;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: var(--primary-dark) 2.5px solid;
+    background-color: transparent;
+    color: #083840;
+  }
+
+  .input:hover{
+    border-color: var(--primary-light);
+    transition: background-color 0.3s;
+  }
+
+  .button {
+    background-color: #4A4A4A;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2%;
+    
+  }
+  .button:hover {
+    background-color: var(--primary-light);
+    transition: 0.3s ease;
+  }
