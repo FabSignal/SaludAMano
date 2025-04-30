@@ -483,14 +483,14 @@
     margin-left: 5%;
     padding: 1%;
     text-align: justify;
-    border-bottom: #083840 1px solid;
+    border-bottom: --hero-gradient-start 1px solid;
     line-height: 2rem;
   }
 
   label {
     font-size: 1.1rem;
     font-weight: bold;
-    color:#083840;
+    color:var(--hero-gradient-start);
     margin-top: 1%;
     display: inline-block;
   }
@@ -510,7 +510,7 @@
   }
 
   .input:hover{
-    border-color: var(--primary-light);
+    border-color: var(--neutral-medium);
     transition: background-color 0.3s;
   }
 
@@ -524,9 +524,19 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 2%;
-    
+    margin-left: 3%;
   }
+
+  .botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3%;
+  }
+
   .button:hover {
-    background-color: var(--primary-light);
+    background-color: var(--card-background-1);
     transition: 0.3s ease;
   }
