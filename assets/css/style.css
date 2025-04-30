@@ -8,7 +8,7 @@
     --neutral-medium: #d6baaa;   
     --neutral-dark: #5b5151; 
     --secondary-light: #fafafa; 
-    --beige-medium: #b38f7e
+    --beige-medium: #b38f7e;
     
     /* Colores de acento */
     --accent-orange: #faa85e; 
@@ -44,7 +44,7 @@
   }
   
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     background: var(--primary-light);
     color: var(--text-primary);
@@ -133,7 +133,7 @@
   
   /* Hero Section */
   .hero {
-    background: linear-gradient(180deg, var(--hero-gradient-start), var(--hero-gradient-end));
+    background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end)); 
     color: var(--primary-light);
     text-align: center;
     padding: 8rem 1rem;
@@ -201,21 +201,22 @@
     border-radius: 30px;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    /* transition: transform 0.3s, background-color 0.3s, color 0.3s; */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-align: center;
     min-height: 400px; /* Altura mínima */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; /* 100% del contenedor menos 2rem de margen por lado */
-    margin: 2rem auto; /* Margen vertical y centrado horizontal */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
+    width: 100%;
+    margin: 2rem auto; 
+    box-sizing: border-box; 
   }
   
   /*Hover de las tarjetas*/
   .card-1:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);;
     background-color: var(--primary-light);
     color: var(--primary-dark);
     border-color: var(--accent-lavender);
@@ -223,7 +224,7 @@
   }
 
   .card-2:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     background-color: var(--card-hover-background);
     color: var(--primary-dark);
     border-color: var(--accent-lavender);
@@ -231,7 +232,7 @@
   }
 
   .card-3:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     background-color: var(--card-hover-background);
     color: var(--primary-dark);
     border-color: var(--accent-lavender);
@@ -239,7 +240,7 @@
   }
 
   .card-4:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);;
     background-color: var(--primary-light);
     color: var(--primary-dark);
     border-color: var(--accent-mint);
@@ -248,10 +249,16 @@
   
   .card h3 {
     color: var(--primary-dark);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
   }
   
   .card p {
     color: var(--text-secondary);
+    font-size: 1.1rem; /* 17.6px aproximadamente */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
   
 
@@ -273,8 +280,8 @@
   /*'Imagen' en tarjetas*/
   .imagen-tarjeta {
     display: block;
-    font-size: 1.5rem; 
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem;
     text-align: center;
   }
   
@@ -308,7 +315,7 @@
   }
   
   .card-2 a:hover {
-    background-color: #f5f5dc; 
+    background-color: var(--accent-lavender); 
   }
   
   .card-3 {
@@ -318,12 +325,12 @@
   }
   
   .card-3 a {
-    background-color: #e74c3c; /* Rojo oscuro */
+    background-color: var(--accent-lavender);
     color: var(--primary-light);
   }
   
   .card-3 a:hover {
-    background-color: #f1c40f; /* Amarillo */
+    background-color: var(--accent-orange);
   }
 
   /*Container para la tarjeta 4, en caso de querer cambiar el ancho*/
@@ -346,12 +353,12 @@
   } 
   
   .card-4 a {
-    background-color: var(--accent-lavender); 
+    background-color: var(--accent-orange); 
     color: var(--primary-medium);
   }
   
   .card-4 a:hover {
-    background-color: #ffc107;
+    background-color: var(--accent-mint);
   }
 
   /* Footer */
@@ -483,14 +490,14 @@
     margin-left: 5%;
     padding: 1%;
     text-align: justify;
-    border-bottom: --hero-gradient-start 1px solid;
+    border-bottom: #083840 1px solid;
     line-height: 2rem;
   }
 
   label {
     font-size: 1.1rem;
     font-weight: bold;
-    color:var(--hero-gradient-start);
+    color:#083840;
     margin-top: 1%;
     display: inline-block;
   }
@@ -506,11 +513,11 @@
     border-right: none;
     border-bottom: var(--primary-dark) 2.5px solid;
     background-color: transparent;
-    color: var(--hero-gradient-start);
+    color: #083840;
   }
 
   .input:hover{
-    border-color: var(--neutral-medium);
+    border-color: var(--primary-light);
     transition: background-color 0.3s;
   }
 
@@ -524,20 +531,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 2%;
-    margin-left: 3%;
+    
   }
-
-  .botones{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 3%;
-  }
- 
-
   .button:hover {
-    background-color: var(--card-background-1);
+    background-color: var(--primary-light);
     transition: 0.3s ease;
   }
