@@ -1,25 +1,46 @@
 :root {
     /* Colores base */
-    --primary-dark: #000000; /* Negro absoluto */
-    --primary-medium: #222121; /* Gris muy oscuro */
-    --primary-light: #ffffff; /* Blanco */
-    --secondary-dark: #373636; /* Gris oscuro medio */
+    --primary-dark: #000000; 
+    --primary-medium: #222121; 
+    --primary-light: #ffffff; 
+    --secondary-dark: #373636; 
+    --neutral-light: #f0e8e0;    
+    --neutral-medium: #d6baaa;   
+    --neutral-dark: #5b5151; 
+    --secondary-light: #fafafa; 
+    --beige-medium: #b38f7e
     
-    /* Colores para acentuar */
-    --accent-blue: #1150ab;
-    --accent-lightblue: #6994c6;
-    --accent-lavender: #7c5295; 
-    --accent-mint: #98ff98;
+    /* Colores de acento */
+    --accent-orange: #faa85e; 
+    /* --accent-mint: #e4f1e4; */ 
+    --accent-lavender: #7c5295;   
+    --accent-mint: #d1e6d1;       
+    /* --accent-lavender: #8fa3ff; */
     
     /* Colores de texto */
     --text-primary: #000000;
     --text-secondary: #373636;
 
-    /* Colores de hero y tarjetas*/
-    --hero-gradient-start:#222121 ; /* Beige grisáceo*/
+    /* Colores hero y tarjetas*/
+    --hero-gradient-start:#222121 ; 
     --hero-gradient-end:#6e6e6e ;
-    --card-background: #e6e6fa; /* Lavanda */
-    --card-hover-background: #f5f5dc; /* Beige */
+
+    --card-hoover-background: #d1e6d1;
+    
+    --card-background-1: #8ea2ff; 
+    --card-hover-background-1: #d6baaa; 
+    --card-button-1: #d8e3b7;
+    --card-text-button-1: #242323;
+
+    --card-background-2: #8ea2ff; 
+    --card-hover-background-2: #d6baaa; 
+    --card-button-2: #d8e3b7;
+    --card-text-button-2: #242323;
+
+    --card-background-1: #8ea2ff; 
+    --card-hover-background-1: #d6baaa; 
+    --card-button-1: #d8e3b7;
+    --card-text-button-1: #242323;
   }
   
   body {
@@ -41,14 +62,14 @@
     top: 0;
     background: var(--primary-light);
     border: 2px solid var(--secondary-dark);
-    border-radius: 12px;
+    border-radius: 30px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     z-index: 1000;
     margin: 1rem auto 2rem;
     max-width: 1300px;
     width: 95%;
     min-height: 60px;
-    padding: 0 1 rem;
+    padding: 0;
   }
   
   header h1 {
@@ -128,7 +149,7 @@
   }
   
   /* Secciones */
-  .secciones {
+ /*  .secciones {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -136,22 +157,93 @@
     max-width: 1300px;
     width: 95%;
     margin: 0 auto;
+  }  */
+  .secciones {
+    display: block; 
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto 2rem;
+    padding: 2rem 0;
   }
-  
+
+  .seccion-1 {
+    background-color: var(--secondary-light); 
+    padding: 5rem 0;
+  }
+
+  .seccion-2 {
+    background-color: var(--secondary-light); 
+    padding: 5rem 0; 
+  }
+
+  .seccion-3 {
+    background-color: var(--secondary-light); 
+    padding: 5rem 0; 
+  }
+
+  .seccion-4 {
+    background-color: var(--secondary-light); 
+    padding: 5rem 0; 
+  }
+
+  .container-card {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto; 
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
   .card {
-    background-color: var(--card-background);
-    border: 2px solid var(--secondary-dark);
-    border-radius: 10px;
+    /*background-color: var(--card-background-1);*/
+    background-color: var(--secondary-light); 
+    border: 2px solid var(--accent-mint);
+    border-radius: 30px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
     text-align: center;
+    min-height: 400px; /* Altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 100% del contenedor menos 2rem de margen por lado */
+    margin: 2rem auto; /* Margen vertical y centrado horizontal */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
   }
   
-  .card:hover {
+  /*Hover de las tarjetas*/
+  .card-1:hover {
     transform: translateY(-5px);
-    background-color: var(--card-hover-background); /* Beige al hover */
+    background-color: var(--primary-light);
     color: var(--primary-dark);
+    border-color: var(--accent-lavender);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .card-2:hover {
+    transform: translateY(-5px);
+    background-color: var(--card-hover-background);
+    color: var(--primary-dark);
+    border-color: var(--accent-lavender);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .card-3:hover {
+    transform: translateY(-5px);
+    background-color: var(--card-hover-background);
+    color: var(--primary-dark);
+    border-color: var(--accent-lavender);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .card-4:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--accent-mint);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   }
   
   .card h3 {
@@ -162,20 +254,21 @@
     color: var(--text-secondary);
   }
   
+
   .card a {
     display: inline-block;
     margin-top: 1rem;
     background-color: var(--accent-lavender);
     color: var(--primary-light);
     padding: 0.75rem 1.5rem;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: all 0.3s ease;
   }
   
-  .card a:hover {
+ /*  .card a:hover {
     background-color: var(--accent-mint);
     transform: scale(1.05);
-  }
+  } */
   
   /*'Imagen' en tarjetas*/
   .imagen-tarjeta {
@@ -185,6 +278,82 @@
     text-align: center;
   }
   
+  /* Colores específicos para cada tarjeta */
+    .card-1 { 
+    width: 100%; /* Ocupará el 100% del container-card */
+    max-width: none; 
+    margin: 0 ; /* Centrado horizontal dentro del container-card */
+  }
+  
+  .card-1 a {
+    background-color: var(--card-button-1);
+    color: var(--card-text-button-1);
+  }
+  
+  .card-1 a:hover {
+    background-color: var(--card-hover-background-1); /*Color del hover del botón*/
+    border-color: #697bff; /* Azul oscuro */
+    color: var(--primary-dark); /*Color de la letra del botón*/
+  }
+  
+  .card-2 {
+    width: 100%; 
+    max-width: none; 
+    margin: 0 
+  }
+  
+  .card-2 a {
+    background-color: #b38f7e;
+    color: var(--primary-light);
+  }
+  
+  .card-2 a:hover {
+    background-color: #f5f5dc; 
+  }
+  
+  .card-3 {
+    width: 100%;
+    max-width: none; 
+    margin: 0 ; 
+  }
+  
+  .card-3 a {
+    background-color: #e74c3c; /* Rojo oscuro */
+    color: var(--primary-light);
+  }
+  
+  .card-3 a:hover {
+    background-color: #f1c40f; /* Amarillo */
+  }
+
+  /*Container para la tarjeta 4, en caso de querer cambiar el ancho*/
+  /* .card-4 container {
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto 2rem; 
+    padding: 0 1rem;     
+  } */
+  
+   .card-4 {
+    border: 2px solid var(--accent-lavender); 
+    color: var(--primary-light);
+    padding: 0.5rem 0.5rem;
+    border-radius: 30px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto 2rem;
+
+  } 
+  
+  .card-4 a {
+    background-color: var(--accent-lavender); 
+    color: var(--primary-medium);
+  }
+  
+  .card-4 a:hover {
+    background-color: #ffc107;
+  }
+
   /* Footer */
   footer {
     background: var(--primary-light);
@@ -196,10 +365,9 @@
     border: 2px solid var(--primary-medium);
     color: var(--accent-lavender);
     padding: 0.5rem 0.5rem;
-    border-radius: 12px;
+    border-radius: 30px;
     text-align: center;
     max-width: 1300px;
-    
     margin: 0 auto 2rem;
   }
   
@@ -234,7 +402,7 @@
       gap: 1rem;
     }
   
-    /* Ocultar menú por defecto en móvil */
+    /* Ocultar menú por defecto en celular */
     .nav-links {
       display: none;
     }
@@ -263,72 +431,6 @@
     }
   }
   
-  /*Contacto*/
-  
-  .contacto .title{
-    font-size: 2rem;
-    color: #083840;
-    text-align: left;
-  }
-  
-  .formulario {
-    width: 40%;
-    height: 50%;
-    font-size: 1.5rem;
-    margin-top: 2%;
-    margin-left: 5%;
-    padding: 1%;
-    text-align: left;
-    border-bottom: #083840 1px solid;
-    line-height: 2rem;
-  }
-  
-  label {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color:#083840;
-    margin-top: 1%;
-    display: inline-block;
-  }
-  
-  .input {
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
-    margin-bottom: 1%;
-    border-radius: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: var(--primary-dark) 2.5px solid;
-    background-color: transparent;
-    color: #083840;
-  }
-  
-  .input:hover{
-    border-color: var(--primary-light);
-    transition: background-color 0.3s;
-  }
-  
-  .button {
-    background-color: #4A4A4A;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 2%;
-    display: inline-block;
-    margin-left: auto;     
-    margin-right: auto;  
-  }
-  
-  .button:hover {
-    background-color: var(--primary-light);
-    transition: 0.3s ease;
-  }
   
   /* Responsive Tablet */
   @media (min-width: 768px) and (max-width: 1024px) {
