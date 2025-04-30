@@ -490,14 +490,14 @@
     margin-left: 5%;
     padding: 1%;
     text-align: justify;
-    border-bottom: #083840 1px solid;
+    border-bottom: --primary-dark 1px solid;
     line-height: 2rem;
   }
 
   label {
     font-size: 1.1rem;
     font-weight: bold;
-    color:#083840;
+    color: var(--primary-medium);
     margin-top: 1%;
     display: inline-block;
   }
@@ -513,11 +513,11 @@
     border-right: none;
     border-bottom: var(--primary-dark) 2.5px solid;
     background-color: transparent;
-    color: #083840;
+    color: var(--hero-gradient-start);
   }
 
   .input:hover{
-    border-color: var(--primary-light);
+    border-color: var(--neutral-medium);
     transition: background-color 0.3s;
   }
 
@@ -533,7 +533,18 @@
     margin-top: 2%;
     
   }
+
+  .botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4%;
+  }
+
   .button:hover {
-    background-color: var(--primary-light);
+    background-color: var(--card-background-1);
     transition: 0.3s ease;
   }
