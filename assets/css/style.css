@@ -506,7 +506,7 @@
     border-right: none;
     border-bottom: var(--primary-dark) 2.5px solid;
     background-color: transparent;
-    color: #083840;
+    color: var(--hero-gradient-start);
   }
 
   .input:hover{
@@ -535,6 +535,7 @@
     flex-wrap: wrap;
     margin-top: 3%;
   }
+ 
 
   .button:hover {
     background-color: var(--card-background-1);
