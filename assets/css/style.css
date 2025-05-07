@@ -195,14 +195,12 @@
   }
 
   .card {
-    /*background-color: var(--card-background-1);*/
     background-color: var(--secondary-light); 
     border: 2px solid var(--accent-mint);
     border-radius: 30px;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    /* transition: transform 0.3s, background-color 0.3s, color 0.3s; */
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-align: center;
     min-height: 400px; /* Altura mínima */
     display: flex;
