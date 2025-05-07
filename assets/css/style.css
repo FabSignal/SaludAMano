@@ -530,6 +530,11 @@
     transition: background-color 0.3s;
   }
 
+  .consentimiento{
+    font-size: 1rem;
+    text-align: center;
+  }
+
   .button {
     background-color: #4A4A4A;
     color: white;
