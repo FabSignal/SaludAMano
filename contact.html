@@ -30,21 +30,53 @@
         <h1 class="title">Formulario de contacto</h1>
         <div class="formulario">
         <form action="" method="post">
-            <label class="" for="name">Nombre:</label>
+            <label class="" for="name">Nombre del centro o consultorio:</label>
             <input class="input" type="text" id="name" name="name" required>
 
-            <label class="" for="surname">Apellido:</label>
-            <input class="input" type="text" id="surname" name="surname" required>
+            <label class="" for="especiality">Especialidades ofrecidas:</label>
+            <select class="input" name="especiality" id="especiality" multiple>
+                <option value="medicina_general">Medicina General</option>
+                <option value="pediatria">Pediatría</option>
+                <option value="ginecologia">Ginecología</option>
+                <option value="odontologia">Odontología</option>
+                <option value="psicologia">Psicología</option>
+                <option value="traumatologia">Traumatología</option>
+                <option value="cardiologia">Cardiología</option>
+                <option value="dermatologia">Dermatología</option>
+                <option value="otorrinolaringologia">Otorrinolaringología</option>
+            </select>
+          
+            <label for="profesional">Nombre del/los profesionales:</label>
+            <input class="input" type="text" id="profesional" name="profesional" required>
 
-            <label class="" for="email">Correo electrónico:</label>
-            <input class="input" type="email" id="email" name="email" required>
+            <label for="direccion">Dirección:</label>
+            <input class="input" type="text" id="direccion" name="direccion" required>
 
-            <label class="" for="phone">Teléfono:</label>
-            <input class="input" type="tel" id="phone" name="phone">
+            <label for="modalidad-atencion">Modalidad de atención:</label>
+            <select class="input" name="modalidad-atencion" id="modalidad-atencion" multiple>
+                <option value="presencial">Presencial</option>
+                <option value="telemedicina">Telemedicina</option>
+                <option value="mixto">Mixto</option>
+            </select>
 
-            <label class="" for="message">Mensaje:</label><br>
+            <label for="dias-atencion">Días y horarios de atención:</label>
+            <input class="input" type="text" id="days" name="days" required>
+
+            <label for="obras-sociales">Obras sociales aceptadas:</label>
+            <input class="input" type="text" id="obras-sociales" name="obras-sociales" value="IOMA, OSDE, PAMI, otras..." required>
+
+            <label class="" for="contacto">Contacto directo:</label>
+            <input class="input" type="tel" id="contacto" name="contacto" value="tel:">
+            <input class="input" type="email" id="contacto" name="contacto" value="mail:">
+
+            <label class="" for="website">Página web o redes sociales:</label>
+            <input class="input" type="url" id="website" name="website">
+
+            <label class="" for="message">Breve descripción o mensaje adicional:</label><br>
             <textarea class="input" id="message" name="message" rows="5" cols="63" required></textarea>
 
+            <label for="consentimiento">Acepto que los datos proporcionados sean utilizados con fines informativos y para ser contactado por el equipo de Salud a Mano</label>
+            <input type="checkbox" name="consentimiento" id="consentimiento">
             <div class="botones">
               <input class="button" type="submit" value="Enviar">
               <input class="button" type="reset" value="Limpiar"><br><br>
