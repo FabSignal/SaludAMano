@@ -442,33 +442,7 @@
   }
   
   
-  /* Responsive Tablet */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .container {
-      padding: 0 2rem;
-    }
   
-    .hero {
-      padding: 3rem 2rem;
-    }
-  
-    .secciones {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-  
-    .card {
-      padding: 1.5rem;
-    }
-  
-    .nav-links ul {
-      gap: 1rem;
-    }
-  
-    .nav-links a {
-      font-size: 1rem;
-    }
-  }
 
   /* Contacto*/
   .contacto{
@@ -486,11 +460,12 @@
   }
 
   .formulario {
-    width: 40%;
+    width: 70%;
     height: 50%;
     font-size: 1.5rem;
     margin-top: 2%;
-    margin-left: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
     padding: 1%;
     text-align: justify;
     border-bottom: --primary-dark 1px solid;
@@ -561,4 +536,47 @@
   .button:hover {
     background-color: var(--card-background-1);
     transition: 0.3s ease;
+  }
+
+  /* Responsive Tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      padding: 0 2rem;
+    }
+  
+    .hero {
+      padding: 3rem 2rem;
+    }
+  
+    .secciones {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  
+    .card {
+      padding: 1.5rem;
+    }
+  
+    .nav-links ul {
+      gap: 1rem;
+    }
+  
+    .nav-links a {
+      font-size: 1rem;
+    }
+
+
+    .formulario {
+      width: 70%;
+      height: 50%;
+      font-size: 1.5rem;
+      margin-top: 2%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      padding: 1%;
+      text-align: justify;
+      border-bottom: --primary-dark 1px solid;
+      line-height: 2rem;
+    }
+
   }
