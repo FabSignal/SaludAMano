@@ -22,10 +22,10 @@
     --text-secondary: #373636;
 
     /* Colores hero y tarjetas*/
-    --hero-gradient-start:#222121 ; 
-    --hero-gradient-end:#6e6e6e ;
+    /* --hero-gradient-start:#222121 ; 
+    --hero-gradient-end:#6e6e6e ; */
 
-    --card-hoover-background: #d1e6d1;
+   /*  --card-hoover-background: #d1e6d1;
     
     --card-background-1: #8ea2ff; 
     --card-hover-background-1: #d6baaa; 
@@ -40,13 +40,13 @@
     --card-background-1: #8ea2ff; 
     --card-hover-background-1: #d6baaa; 
     --card-button-1: #d8e3b7;
-    --card-text-button-1: #242323;
+    --card-text-button-1: #242323; */
   }
   
   body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: var(--primary-light);
+    background: var(--secondary-light);
     color: var(--text-primary);
   }
   
@@ -131,12 +131,17 @@
     background: rgba(255,255,255,0.2);
   }
   
-  /* Hero Section */
-  .hero {
-    background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end)); 
-    color: var(--primary-light);
+    /* Hero Section */
+  .hero { 
+    color: var(--primary-dark);
+    background-color : var(--secondary-light);
     text-align: center;
-    padding: 8rem 1rem;
+    padding: 20px 0;
+    position: relative; 
+    min-height: auto;
+    display: flex;
+  align-items: center;
+  justify-content: center;
   }
   
   .hero h2 {
@@ -145,19 +150,78 @@
   }
   
   .hero p{
-    font-size: 1.25rem
+    font-size: 1.1rem
   }
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  margin-top: 20px
+}
+
+
+  .hero-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Importante para contener elementos posicionados absolutamente */
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Imagen mano*/
+.hero-image.hand {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  z-index: 1;
+  margin-top: 15px;
+}
+
+/* Imagen corazón*/
+.hero-image.heart {
+  position: absolute;
+  top: -20px; /* ajuste de la superposición de las imágenes */
+  left: 50%; 
+  transform: translateX(-50%); /* Ajuste para centrado perfecto, si no se aplican la linea anterior y esta, la imagen no queda centrada */
+  width: 16%; 
+  z-index: 2;
+  animation: heartbeat 2.3s ease-in-out infinite; 
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
+  margin-top: -20px; /* hace que el texto esté más cerca de la imagen de la mano */
+    padding-bottom: 1rem; 
+}
   
-  /* Secciones */
- /*  .secciones {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 4rem 1rem;
-    max-width: 1300px;
-    width: 95%;
-    margin: 0 auto;
-  }  */
+  /* Animación latido */
+@keyframes heartbeat {
+  0% { 
+    transform: translateX(-50%) scale(1) translateY(0); 
+  }
+  15% { 
+    transform: translateX(-50%) scale(1.2) translateY(-15px); 
+  }
+  30% { 
+    transform: translateX(-50%) scale(1) translateY(0); 
+  }
+  45% { 
+    transform: translateX(-50%) scale(1.1) translateY(-10px); 
+  }
+  60% { 
+    transform: translateX(-50%) scale(1) translateY(0); 
+  }
+}
+
+
   .secciones {
     display: block; 
     max-width: 1300px;
@@ -212,10 +276,44 @@
     box-sizing: border-box; 
   }
   
+   /*'Imagen' en tarjetas*/
+  .imagen-tarjeta {
+    display: block;
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem;
+    text-align: center;
+    animation: float 3s linear infinite;
+  }
+
+  .imagen-tarjeta img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Animación de flotación para las imágenes */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+  75% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
   /*Hover de las tarjetas*/
   .card-1:hover {
     transform: translateY(-5px) scale(1.02);;
-    background-color: var(--primary-light);
+    background-color: var(--secondary-light);
     color: var(--primary-dark);
     border-color: var(--accent-lavender);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -231,7 +329,7 @@
 
   .card-3:hover {
     transform: translateY(-5px) scale(1.02);
-    background-color: var(--card-hover-background);
+    background-color: var(--secondary-light);
     color: var(--primary-dark);
     border-color: var(--accent-lavender);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -239,7 +337,7 @@
 
   .card-4:hover {
     transform: translateY(-5px) scale(1.02);;
-    background-color: var(--primary-light);
+    background-color: var(--secondary-light);
     color: var(--primary-dark);
     border-color: var(--accent-mint);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -258,8 +356,9 @@
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
-  
 
+  
+  /* Estilos para los enlaces */
   .card a {
     display: inline-block;
     margin-top: 1rem;
@@ -268,24 +367,6 @@
     padding: 0.75rem 1.5rem;
     border-radius: 30px;
     transition: all 0.3s ease;
-  }
-  
- /*  .card a:hover {
-    background-color: var(--accent-mint);
-    transform: scale(1.05);
-  } */
-  
-  /*'Imagen' en tarjetas*/
-  .imagen-tarjeta {
-    display: block;
-    font-size: 2.5rem; 
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .card:hover .imagen-tarjeta {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
   }
   
   /* Colores específicos para cada tarjeta */
@@ -335,23 +416,11 @@
   .card-3 a:hover {
     background-color: var(--accent-orange);
   }
-
-  /*Container para la tarjeta 4, en caso de querer cambiar el ancho*/
-  /* .card-4 container {
-    max-width: 1300px;
-    width: 95%;
-    margin: 0 auto 2rem; 
-    padding: 0 1rem;     
-  } */
-  
    .card-4 {
     border: 2px solid var(--accent-lavender); 
     color: var(--primary-light);
-    padding: 0.5rem 0.5rem;
-    border-radius: 30px;
-    height: auto;
-    text-align: center;
-    margin: 0 auto 2rem;
+    padding: 2rem 0.5rem;
+    
 
   } 
   
@@ -412,6 +481,8 @@
       padding: 2rem 0;
     }
 
+  /* ==================================================== */
+  
   /* Contacto*/
   .contacto{
     display: flex;
@@ -506,7 +577,7 @@
     transition: 0.3s ease;
   }
 
-
+  /* ======================================================*/
 
   /* Responsive Celular*/
   @media (max-width: 768px) {
@@ -535,6 +606,52 @@
     .nav-links {
       display: none;
     }
+
+    .hero {
+    padding: 15px 0;
+    min-height: auto;
+   }
+
+   .hero-container {
+    margin-top: 5px;
+   }
+
+    .hero-content {
+    margin-top: -10px;
+    padding-bottom: 0.5rem;
+  }
+
+    .hero-images {
+        max-width: 85%;
+    }
+
+    .hero-image.hand {
+      max-width: 140px; 
+      margin-top: 60px;
+    }
+  
+   .hero-image.heart {
+      width: 90px; /* m+as pequeño */
+      top: -15px;
+    }
+
+    /* Estilos para las imágenes */
+    .imagen-tarjeta img {
+    width: 90px;       
+    height: 90px;      
+    object-fit: contain;
+    }
+
+    .hero h2 {
+    font-size: clamp(1.6rem, 3vw, 1,6rem);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+
     .contacto{
     display: flex;
     justify-content: center;
@@ -562,9 +679,46 @@
       padding: 0 2rem;
     }
   
+    .header {
+    margin-bottom: 0; 
+  }
+
     .hero {
-      padding: 3rem 2rem;
+      padding: 30px 0; 
+      min-height: auto;
     }
+
+    .hero-container {
+    margin-top: 10px;
+  }
+
+    .hero-images {
+    max-width: 450px; /* Ajustado para tablets */
+  }
+  
+  .hero-image.hand {
+    max-width: 160px;
+  }
+
+  
+  .hero-image.heart {
+    width: 18%;
+    top: -30px;
+  }
+  
+  .hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-content {
+    margin-top: -15px;
+    padding-bottom: 0.8rem;
+  }
   
     .secciones {
       grid-template-columns: repeat(2, 1fr);
@@ -573,6 +727,14 @@
   
     .card {
       padding: 1.5rem;
+    }
+  
+    .card .imagen-tarjeta {
+    margin-top: 10px; 
+  }
+
+    .nav-links ul {
+      gap: 1rem;
     }
   
     .nav-links ul {
