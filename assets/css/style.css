@@ -9,6 +9,7 @@
     --neutral-dark: #5b5151; 
     --secondary-light: #fafafa; 
     --beige-medium: #b38f7e;
+    --beige-dark: #4A4A4A;
     
     /* Colores de acento */
     --accent-orange: #faa85e; 
@@ -531,7 +532,7 @@
     border-right: none;
     border-bottom: var(--primary-dark) 2.5px solid;
     background-color: transparent;
-    color: var(--hero-gradient-start);
+    color: var(--primary-medium);
   }
 
   .input:hover{
@@ -550,13 +551,13 @@
   }
 
   .button {
-    background-color: #4A4A4A;
-    color: white;
+    background-color: var(--beige-dark);
+    color: var(--primary-light);
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     margin-top: 2%;
     
@@ -573,7 +574,7 @@
   }
 
   .button:hover {
-    background-color: var(--card-background-1);
+    background-color: var(--neutral-medium);
     transition: 0.3s ease;
   }
 
